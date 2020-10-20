@@ -1,0 +1,51 @@
+name:                handson-haskell
+version:             0.1.0.0
+github:              "jtonic/handson-haskell"
+license:             BSD3
+author:              "Antonel-Ernest Pazargic"
+maintainer:          "antonel.pazargic@gmail.com"
+copyright:           "2020 Author name here"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/handson-haskell#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+# - text >= 1.2 # text dependency
+- text-show >= 3.8
+- HsYAML >= 0.2
+
+library:
+  source-dirs: src
+
+executables:
+  handson-haskell-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - handson-haskell
+
+tests:
+  handson-haskell-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - handson-haskell

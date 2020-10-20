@@ -1,0 +1,13 @@
+.idea/
+dist/
+.out/
+
+.stack-work/
+*~
+
+*.iml
+*.ipr
+*.iws
+
+# Project exclude paths
+/out/
