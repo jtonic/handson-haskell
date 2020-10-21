@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         ghc: ['8.8.4']
-        cabal: ['2.0.0.1']
+        cabal: ['latest']
         os: [ubuntu-latest, macOS-latest]
         # exclude:
         #   # GHC 8.8+ only works with cabal v3+
@@ -23,4 +23,6 @@ jobs:
         with:
           ghc-version: ${{ matrix.ghc }}
           cabal-version: ${{ matrix.cabal }}
+          enable-stack: true
+          stack-version: 'latest'
       - run: cabal build
