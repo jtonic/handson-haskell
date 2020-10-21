@@ -3,7 +3,6 @@ module Imports where
 
 import qualified Data.Text.IO as T
 import TextShow
-import Data.Text
 import A.B.Module1
 
 main :: IO ()

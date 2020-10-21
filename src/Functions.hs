@@ -17,4 +17,4 @@ repeatStr :: (Eq t, Num t) => String -> t -> String
 repeatStr str n =
     case n of
     0 -> ""
-    _ -> str ++ (repeatStr str (n - 1))
+    _ -> str ++ repeatStr str (n - 1)

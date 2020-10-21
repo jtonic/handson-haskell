@@ -42,6 +42,16 @@ Build an native executable:
     > stack exec -- ghc hof.hs -o hof
 ```
 
+Run tests
+```
+  > stack test
+```
+
+Generate documentation
+```
+  > stack haddock
+```
+
 Load a hs file in the Haskell REPL (ghci)
 ---
 
@@ -149,8 +159,10 @@ Haskell ecosystem
 Tools
 ---
 
-- Cabal     - Haskell package manager
-- Hackage   - Haskell packages repository
+- cabal     - Haskell package manager
+- hackage   - Haskell packages repository
+- stack     -
+- haddock   - A tool to generate documentation
 
 Useful/popular libraries
 ---

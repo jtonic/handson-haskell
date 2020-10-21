@@ -8,4 +8,4 @@ numbers = 1 : 2 : 3 : []
 double n =
     case n of
     []    -> []
-    _     -> (2 * (head n)) : double(tail n)
+    _     -> 2 * head n : double(tail n)

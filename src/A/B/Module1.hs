@@ -1,9 +1,10 @@
 {-# LANGUAGE OverloadedStrings #-}
+
 module A.B.Module1 where
 
-import TextShow
 import Data.Text
 
+-- | The 'greet' function use to greet someone
 greet :: Text -> Text
 greet x =
     greeting

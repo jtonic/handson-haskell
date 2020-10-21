@@ -7,8 +7,8 @@ main = do
 greeting :: IO ()
 greeting = do
     let a1 = ("Antonel-Ernest", "Pazargic")
-    let a = Main.id a1
-    print $ "Antonel is the best " ++ (fst a) ++ "  " ++ (snd a)
+    let a = Exercises_1.id a1
+    print $ "Antonel is the best " ++ fst a ++ "  " ++ snd a
     let c = const "Tony" "Liviu"
     print c
     let brothers = concatenate "Tony"  " "  "Tutye"
@@ -20,8 +20,8 @@ greeting = do
     print (fib 5)
 
     let numbers = [1, 2, 3]
-    let doubled = Main.map (\x -> x * 2) numbers
-    print $ "double numbers: " ++ (show doubled)
+    let doubled = Exercises_1.map (* 2) numbers
+    print $ "double numbers: " ++ show doubled
 
 
 id :: a -> a
@@ -50,5 +50,5 @@ fib n = fib (n - 1) + fib (n - 2)
 
 map :: (a -> b) -> [a] -> [b]
 map _ [] = []
-map f (x:xs) = (f x) : (Main.map f xs)
+map f (x:xs) = f x : Exercises_1.map f xs
 
