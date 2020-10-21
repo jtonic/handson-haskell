@@ -25,4 +25,7 @@ jobs:
           cabal-version: ${{ matrix.cabal }}
           enable-stack: true
           stack-version: 'latest'
-      - run: cabal build
+      - name: Run Haskell Tests
+        run: stack test
+      - name: Build Haskell Package Documentation
+        run: stack haddock
