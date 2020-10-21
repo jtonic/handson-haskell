@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: fb0bd925798bf771b232205edced393bc758fecb563a29254759c159ef317aee
+-- hash: b9ca63bd8e58aaa5ed4ea18a5413b2d70b6fd1bdf67f650d4af7049edffed35c
 
 name:           handson-haskell
 version:        0.1.0.0
@@ -15,7 +15,6 @@ author:         Antonel-Ernest Pazargic
 maintainer:     antonel.pazargic@gmail.com
 copyright:      2020 Author name here
 license:        BSD3
-license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
     README.md
@@ -47,6 +46,7 @@ library
   build-depends:
       HsYAML >=0.2
     , base >=4.7 && <5
+    , text >=1.2
     , text-show >=3.8
   default-language: Haskell2010
 
@@ -61,6 +61,7 @@ executable handson-haskell-exe
       HsYAML >=0.2
     , base >=4.7 && <5
     , handson-haskell
+    , text >=1.2
     , text-show >=3.8
   default-language: Haskell2010
 
@@ -76,5 +77,6 @@ test-suite handson-haskell-test
       HsYAML >=0.2
     , base >=4.7 && <5
     , handson-haskell
+    , text >=1.2
     , text-show >=3.8
   default-language: Haskell2010

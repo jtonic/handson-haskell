@@ -21,7 +21,7 @@ description:         Please see the README on GitHub at <https://github.com/gith
 
 dependencies:
 - base >= 4.7 && < 5
-# - text >= 1.2 # text dependency
+- text >= 1.2 # text dependency
 - text-show >= 3.8
 - HsYAML >= 0.2
 
