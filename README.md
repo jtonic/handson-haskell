@@ -184,3 +184,9 @@ For instance the following is used in order to use Text instead of builtin Strin
 ```
 {-# LANGUAGE OverloadedStrings #-}
 ```
+
+References
+---
+
+1.[Infix functions/operators](https://wuciawe.github.io/functional%20programming/haskell/2016/07/03/infix-functions-in-haskell.html)
+2.

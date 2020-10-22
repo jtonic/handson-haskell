@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 0b3db055a4c182046ac55fd393a48c875a3911191215a71b365df68a8536b87a
+-- hash: 95bcab952077d11b80cef0a3ba8e859d32283dc09e2ca53f83b1dd09215b585d
 
 name:           handson-haskell
 version:        0.1.0.0
@@ -34,6 +34,7 @@ library
       Hello
       Hof
       Imports
+      Infix
       Lib
       Lists
       Pythagorean
