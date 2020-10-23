@@ -1,5 +1,4 @@
 module Hello where
 
-string1 = "hello"
-string2 = "world"
-greeting = string1 ++ " " ++ string2
+main :: IO ()
+main = putStrLn "Hello Worlds from Haskell!!!"
