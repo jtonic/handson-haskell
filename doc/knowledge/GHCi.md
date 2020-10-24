@@ -29,6 +29,8 @@ GHCi (Haskell REPL) useful commands
 
 :show modules
 
+:set prompt "λ> "           # Change the prompt to smth. cool
+:unset prompt
 
 # Editing expressions in HGCi
 
