@@ -10,11 +10,21 @@
 
 - Function declaration types:
 
+  - with let/in
+
   ```haskell
-      computation x =
-                  let y = x * 2
+    computation x =
+                let y = x * 2
+                    z = x ^ 2
+                in y + z
+  ```
+  - with where
+
+  ```haskell
+    computation x =
+                y + z
+                where y = x * 2
                       z = x ^ 2
-                  in y + z
   ```
 
 - Common operators
@@ -35,6 +45,7 @@
   - newtype
 
   - type classes:
+
     - Eq
     - Ord
     - Show
