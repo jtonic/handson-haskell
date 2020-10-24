@@ -18,3 +18,18 @@ repeatStr str n =
     case n of
     0 -> ""
     _ -> str ++ repeatStr str (n - 1)
+
+-- | print a show-able with let/in format
+printX :: Show a => a -> IO ()
+printX x =
+    let
+        s = "Value = " ++ show x
+    in
+        print s
+
+-- | print a Show-able with where format
+printX' x =
+        putStrLn s
+        where
+            y = Just 1
+            s = "Value = " ++ show x ++ " " ++ show y
