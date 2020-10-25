@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 95bcab952077d11b80cef0a3ba8e859d32283dc09e2ca53f83b1dd09215b585d
+-- hash: fa886460446db948f7926d0c9b5095e031774121da30e1f7bc7998ddce36bf79
 
 name:           handson-haskell
 version:        0.1.0.0
@@ -29,6 +29,7 @@ library
       A.B.Module1
       Adt
       Comprehension
+      Environment
       Exercises_1
       Functions
       Hello

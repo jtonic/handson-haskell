@@ -17,3 +17,54 @@ l :: MaybeInt
 l = NoInt
 
 m = defaultInt 0 l
+
+data Doggies a =
+    Husky a
+    | Mastiff a
+    deriving (Eq, Show)
+
+
+data DogueDeBordeaux doge = DogueDeBordeaux doge
+
+data Price = Price Int deriving (Eq, Show)
+
+data Manufacturer =
+    Mini
+  | Mazda
+  | Tata
+    deriving (Eq, Show)
+
+data Airline =
+    PapuAir
+  | CatapultsR'Us
+  | TakeYourChancesUnited
+    deriving (Eq, Show)
+
+type Size = Int
+
+data Vehicles =
+      Car Manufacturer Price
+    | Plane Airline Size
+    deriving (Eq, Show)
+
+isCar ::Vehicles -> Bool
+isCar (Car _ _) = True
+isCar _ = False
+
+isPlane :: Vehicles -> Bool
+isPlane (Plane _ _) = True
+isPlane _ = False
+
+getMan :: Vehicles -> Manufacturer
+getMan (Car m _) = m
+
+getMan' :: Vehicles -> Maybe Manufacturer
+getMan' (Car m _) = Just m
+getMan' _ = Nothing
+
+getMan'' :: Vehicles -> Either String Manufacturer
+getMan'' (Car m _) = Right m
+getMan'' _ = Left "No manufacturer"
+
+data Goats = Goats Int deriving (Eq, Show)
+

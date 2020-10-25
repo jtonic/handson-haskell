@@ -36,10 +36,21 @@
 
 - Types
 
+  Definition: Types are a way of categorizing values.
+
+  A `type signature` is a line of code that defines the types for a `value, expression, or function`.
+
   - type synonyms
 
     ```haskell
     type String = [Char]
+    ```
+    ```haskell
+    type Fun a b = a -> b
+    f :: Fun Int String
+    f i = show i
+
+    a 10 # "10"
     ```
 
   - newtype
