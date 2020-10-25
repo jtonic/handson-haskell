@@ -66,5 +66,12 @@ getMan'' :: Vehicles -> Either String Manufacturer
 getMan'' (Car m _) = Right m
 getMan'' _ = Left "No manufacturer"
 
-data Goats = Goats Int deriving (Eq, Show)
+newtype Goats = Goats Int deriving (Eq, Show, Bounded)
+newtype Cows = Cows Int deriving (Eq, Show, Bounded)
 
+tooManyGoats :: Int -> Bool
+tooManyGoats a = a > 50
+
+
+tooManyGoats' :: Goats -> Bool
+tooManyGoats' (Goats g) = g > 50
