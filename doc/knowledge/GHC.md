@@ -4,7 +4,7 @@ GHC stand for Glasgow Haskell Compiler
 
 It compiles the Haskell (hs) source files.
 
-## Misc options
+## Language options
 
 - The syntax. At the beginning at the haskell file use the following syntax
 
