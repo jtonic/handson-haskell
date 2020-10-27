@@ -1,4 +1,5 @@
 module Adt where
+import Data.Int ( Int8 )
 
 data MaybeInt = NoInt | JustInt Int
 
@@ -75,3 +76,13 @@ tooManyGoats a = a > 50
 
 tooManyGoats' :: Goats -> Bool
 tooManyGoats' (Goats g) = g > 50
+
+type Age = Int8
+data Person = Person String Age deriving (Eq, Show)
+
+tony = Person "Antonel" 50
+irina = Person "Irina" 30
+
+personName :: Person -> String
+personName (Person n _) = n
+
