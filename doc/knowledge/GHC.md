@@ -9,8 +9,10 @@ It compiles the Haskell (hs) source files.
 - The syntax. At the beginning at the haskell file use the following syntax
 
   ```
-  {-# put_here_the_options #-}
+  {-# <LANGUAGE_pragma> #-}
   ```
+
+  GHCi equivalent: :set -X<LANGUAGE_pragma>
 
 ## LANGUAGE pragma
 
@@ -24,4 +26,10 @@ It compiles the Haskell (hs) source files.
 
     ```
     {-# LANGUAGE GeneralizedNewtypeDeriving #-}
+    ```
+
+    - Enable the use of un-parenthesized negative numeric literals.
+
+    ```
+    {-# LANGUAGE NegativeLiterals #-}
     ```
