@@ -35,3 +35,14 @@ getSupplierId (Supplier supplierId _ _) = supplierId
 getIdOfTheSupplier :: SupplierId -> Int
 getIdOfTheSupplier (SupplierId id) = id
 
+data Person =
+  Person {
+    pName :: String
+    , pAge :: Int
+  }
+  deriving (Eq, Show)
+
+tony :: Person
+tony = Person "Tony" 50
+irina :: Person
+irina = Person "Irina" 30
