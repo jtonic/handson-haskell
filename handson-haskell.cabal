@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: fa886460446db948f7926d0c9b5095e031774121da30e1f7bc7998ddce36bf79
+-- hash: 1ca9971ce3b9d92753e843a884cb8f967f7b83319474c679d97842d17328e839
 
 name:           handson-haskell
 version:        0.1.0.0
@@ -28,6 +28,7 @@ library
   exposed-modules:
       A.B.Module1
       Adt
+      Adt'
       Comprehension
       Environment
       Exercises_1
@@ -36,8 +37,10 @@ library
       Hof
       Imports
       Infix
+      Learn
       Lib
       Lists
+      Patterns
       Pythagorean
       Records
       Tuples
