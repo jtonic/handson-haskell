@@ -5,9 +5,9 @@ import System.Exit
 
 main :: IO ()
 main = do
-    let args = getArgs
+    args <- getArgs
     putStrLn (parseArgs args)
 
 parseArgs :: [String] -> String
 parseArgs [] = ""
-parseArgs (x:xs) =  x ++ " " ++ parseArgs xs
+parseArgs (x : xs) =  x ++ " " ++ parseArgs xs
