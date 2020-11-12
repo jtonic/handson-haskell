@@ -24,6 +24,8 @@ dependencies:
 - text >= 1.2 # text dependency
 - text-show >= 3.8
 - HsYAML >= 0.2
+- lens >= 4.18.1
+- extra >= 1.7.8
 
 library:
   source-dirs: src

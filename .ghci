@@ -1,0 +1,24 @@
+
+:set -Wunrecognised-pragmas
+:set prompt "λ> "
+:set -Wall
+:set -XOverloadedStrings
+:set -XScopedTypeVariables
+:set -Wempty-enumerations
+:set -Wincomplete-patterns
+
+-- :set -v
+-- :set -XTypeOperators
+-- :set -XTupleSections
+-- :set -XFlexibleContexts
+:set -XGADTs
+
+-- Pretty printing of it
+-- :set -package ghci-pretty
+-- import IPPrint.Colored
+-- :set -interactive-print=IPPrint.Colored.cpprint
+
+
+-- And unset some warns
+:set -Wno-missing-signatures
+:set -Wno-type-defaults
