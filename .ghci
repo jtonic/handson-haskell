@@ -1,24 +1,31 @@
-
-:set -Wunrecognised-pragmas
 :set prompt "λ> "
+
+-- ============================================
+-- warns and sanity checking
+-- ============================================
+:set -Wunrecognised-pragmas
 :set -Wall
 :set -XOverloadedStrings
 :set -XScopedTypeVariables
 :set -Wempty-enumerations
-:set -Wincomplete-patterns
+-- :set -Wincomplete-patterns
 
 -- :set -v
+
+:set -XGADTs
+:set -XLambdaCase
+:set -XNegativeLiterals
 -- :set -XTypeOperators
 -- :set -XTupleSections
 -- :set -XFlexibleContexts
-:set -XGADTs
 
 -- Pretty printing of it
 -- :set -package ghci-pretty
 -- import IPPrint.Colored
 -- :set -interactive-print=IPPrint.Colored.cpprint
 
-
--- And unset some warns
+-- ============================================
+-- MUST BE AT THE END: And unset some warns
+-- ============================================
 :set -Wno-missing-signatures
 :set -Wno-type-defaults
