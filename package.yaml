@@ -4,7 +4,7 @@ github:              "jtonic/handson-haskell"
 license:             BSD3
 author:              "Antonel-Ernest Pazargic"
 maintainer:          "antonel.pazargic@gmail.com"
-copyright:           "2020 Author name here"
+copyright:           "2020 Antonel-Ernest Pazargic"
 
 extra-source-files:
 - README.md
@@ -18,6 +18,24 @@ extra-source-files:
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
 description:         Please see the README on GitHub at <https://github.com/githubuser/handson-haskell#readme>
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wredundant-constraints
+- -Wempty-enumerations
+- -Wincomplete-patterns
+# - -fplugin=Polysemy.Plugin
+- -XGADTs
+- -XLambdaCase
+- -XNegativeLiterals
+# - -fwrite-ide-info    ## needed for Stan
+# - -hiedir=.hie        ## needed for Stan
+- -Wno-missing-signatures
+- -Wno-unused-local-binds
+- -Wno-type-defaults
 
 dependencies:
 - base >= 4.7 && < 5
@@ -51,3 +69,4 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - handson-haskell
+    - QuickCheck
