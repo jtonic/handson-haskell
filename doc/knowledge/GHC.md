@@ -33,3 +33,26 @@ It compiles the Haskell (hs) source files.
     ```
     {-# LANGUAGE NegativeLiterals #-}
     ```
+
+    - Enable the pattern matching exhaustiveness
+    ```
+    {-# OPTIONS_GHC -fwarn-incomplete-patterns #-}
+    ```
+
+    - Enable safety-ness
+    ```
+    {-# LANGUAGE Safe #-}
+    ```
+
+## Get the list of Language extensions
+
+```
+  stack exec -- ghc --supported-extensions
+```
+
+## Build an main executable
+
+```
+  stack exec -- ghc helloworld.hs
+  ./helloworld
+```
