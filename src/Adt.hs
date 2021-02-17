@@ -85,4 +85,3 @@ irina = Person "Irina" 30
 
 personName :: Person -> String
 personName (Person n _) = n
-
