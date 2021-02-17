@@ -26,11 +26,13 @@ ghc-options:
 - -Wincomplete-uni-patterns
 - -Wredundant-constraints
 - -Wempty-enumerations
+- -XTypeApplications
 - -Wincomplete-patterns
 # - -fplugin=Polysemy.Plugin
 - -XGADTs
 - -XLambdaCase
 - -XNegativeLiterals
+- -XFlexibleContexts
 # - -fwrite-ide-info    ## needed for Stan
 # - -hiedir=.hie        ## needed for Stan
 - -Wno-missing-signatures
@@ -44,6 +46,8 @@ dependencies:
 - HsYAML >= 0.2
 - lens >= 4.18.1
 - extra >= 1.7.8
+- random
+- containers
 
 library:
   source-dirs: src
@@ -51,7 +55,7 @@ library:
 executables:
   handson-haskell-exe:
     main:                Main.hs
-    source-dirs:         app
+    source-dirs:         src
     ghc-options:
     - -threaded
     - -rtsopts
@@ -69,4 +73,4 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - handson-haskell
-    - QuickCheck
+    - QuickCheck == 2.13.2

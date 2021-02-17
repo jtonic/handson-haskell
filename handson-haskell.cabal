@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 1ca9971ce3b9d92753e843a884cb8f967f7b83319474c679d97842d17328e839
+-- hash: 1519d250a9276fd2d8a4e345110a1c24266cdab8af1b5df21f3db83394d1495b
 
 name:           handson-haskell
 version:        0.1.0.0
@@ -13,7 +13,7 @@ homepage:       https://github.com/jtonic/handson-haskell#readme
 bug-reports:    https://github.com/jtonic/handson-haskell/issues
 author:         Antonel-Ernest Pazargic
 maintainer:     antonel.pazargic@gmail.com
-copyright:      2020 Author name here
+copyright:      2020 Antonel-Ernest Pazargic
 license:        BSD3
 build-type:     Simple
 extra-source-files:
@@ -27,19 +27,34 @@ source-repository head
 library
   exposed-modules:
       A.B.Module1
+      A.Maybe'
       Adt
       Adt'
+      Collections.Sets
       Comprehension
+      Curry
+      DataTypes
+      DerivingInstances
+      Effects.Learn1
       Environment
       Exercises_1
+      ForAll
       Functions
+      Funcy
+      Gadt
       Hello
+      HelloWorld
       Hof
+      HRank.ElectronicsShop
       Imports
       Infix
-      Learn
+      IO.Files
       Lib
+      ListComprehension
       Lists
+      Main
+      Math'
+      Monads
       Patterns
       Pythagorean
       Records
@@ -50,9 +65,14 @@ library
       Paths_handson_haskell
   hs-source-dirs:
       src
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -Wempty-enumerations -XTypeApplications -Wincomplete-patterns -XGADTs -XLambdaCase -XNegativeLiterals -XFlexibleContexts -Wno-missing-signatures -Wno-unused-local-binds -Wno-type-defaults
   build-depends:
       HsYAML >=0.2
     , base >=4.7 && <5
+    , containers
+    , extra >=1.7.8
+    , lens >=4.18.1
+    , random
     , text >=1.2
     , text-show >=3.8
   default-language: Haskell2010
@@ -60,14 +80,52 @@ library
 executable handson-haskell-exe
   main-is: Main.hs
   other-modules:
+      A.B.Module1
+      A.Maybe'
+      Adt
+      Adt'
+      Collections.Sets
+      Comprehension
+      Curry
+      DataTypes
+      DerivingInstances
+      Effects.Learn1
+      Environment
+      Exercises_1
+      ForAll
+      Functions
+      Funcy
+      Gadt
+      Hello
+      HelloWorld
+      Hof
+      HRank.ElectronicsShop
+      Imports
+      Infix
+      IO.Files
+      Lib
+      ListComprehension
+      Lists
+      Math'
+      Monads
+      Patterns
+      Pythagorean
+      Records
+      Tuples
+      TypeClasses
+      Types
       Paths_handson_haskell
   hs-source-dirs:
-      app
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+      src
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -Wempty-enumerations -XTypeApplications -Wincomplete-patterns -XGADTs -XLambdaCase -XNegativeLiterals -XFlexibleContexts -Wno-missing-signatures -Wno-unused-local-binds -Wno-type-defaults -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       HsYAML >=0.2
     , base >=4.7 && <5
+    , containers
+    , extra >=1.7.8
     , handson-haskell
+    , lens >=4.18.1
+    , random
     , text >=1.2
     , text-show >=3.8
   default-language: Haskell2010
@@ -79,11 +137,16 @@ test-suite handson-haskell-test
       Paths_handson_haskell
   hs-source-dirs:
       test
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -Wempty-enumerations -XTypeApplications -Wincomplete-patterns -XGADTs -XLambdaCase -XNegativeLiterals -XFlexibleContexts -Wno-missing-signatures -Wno-unused-local-binds -Wno-type-defaults -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       HsYAML >=0.2
+    , QuickCheck ==2.13.2
     , base >=4.7 && <5
+    , containers
+    , extra >=1.7.8
     , handson-haskell
+    , lens >=4.18.1
+    , random
     , text >=1.2
     , text-show >=3.8
   default-language: Haskell2010
