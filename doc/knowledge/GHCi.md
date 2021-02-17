@@ -19,7 +19,10 @@ GHCi (Haskell REPL) useful commands
 
 :module (+ | -) <mod>       # add a module in the execution scope
 
+    e.g. :m Data.Monoid              # import module
+
 :module (or :m)             # unload all loaded modules
+
 
 :reload (or :r)             # reload all loaded modules
 
@@ -29,7 +32,7 @@ GHCi (Haskell REPL) useful commands
 
 :show modules
 
-:set prompt "λ> "           # Change the prompt to smth. cool
+:set prompt "GHCi: λ> "           # Change the prompt to smth. cool
 :unset prompt
 
 # Editing expressions in HGCi

@@ -1,30 +1,44 @@
 # Functions
 
-## Function declaration types:
+## `Function signatures`
 
-  - with `let/in`
+- with data type
 
-  ```haskell
-    computation x =
-                let y = x * 2
-                    z = x ^ 2
-                in y + z
-  ```
+```haskell
+ing :: Int -> Int   -- Int is a data type
+```
 
-  - with `where`
+- with type class - type constraint
 
-  ```haskell
+```haskell
+  inc :: Num a => a -> a
+```
+
+## `Function declaration types`
+
+- with `let/in`
+
+```haskell
   computation x =
-              y + z
-              where y = x * 2
-                    z = x ^ 2
-  ```
+              let y = x * 2
+                  z = x ^ 2
+              in y + z
+```
 
-  - with `guards`
+- with `where`
 
-  ```haskell
-  myAbs :: Integer -> Integer
-  myAbs x
-    | x < 0 = (-x)
-    | otherwise = x
-  ```
+```haskell
+computation x =
+            y + z
+            where y = x * 2
+                  z = x ^ 2
+```
+
+- with `guards`
+
+```haskell
+myAbs :: Integer -> Integer
+myAbs x
+  | x < 0 = (-x)
+  | otherwise = x
+```
