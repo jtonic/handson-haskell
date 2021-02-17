@@ -8,9 +8,13 @@
 # A snapshot resolver dictates the compiler version and the set of packages
 # to be used for project dependencies. For example:
 #
-resolver: lts-16.18
+# Stable haskell package sets
+# https://www.stackage.org/
+# vs code supported ghc versions: https://github.com/haskell/vscode-haskell#supported-ghc-versions
+resolver: lts-16.31
 # resolver: nightly-2015-09-21
-# resolver: ghc-7.10.2
+# resolver: 8.10.2
+
 #
 # The location of a snapshot can be provided as a file or url. Stack assumes
 # a snapshot provided as a file might change, whereas a url resource does not.
@@ -36,11 +40,14 @@ packages:
 # forks / in-progress versions pinned to a git hash. For example:
 #
 # extra-deps:
-# - acme-missiles-0.3
+# - hoogle-5.0.18
+# - hscolour-1.24.4
+# - ghci-pretty-0.0.2
+# - ipprint-0.5
 # - git: https://github.com/commercialhaskell/stack.git
 #   commit: e7b331f14bcffb8367cd58fbfc8b40ec7642100a
 #
-# extra-deps: []
+extra-deps: []
 
 # Override default flag values for local packages and extra-deps
 # flags: {}
