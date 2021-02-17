@@ -9,5 +9,10 @@ dist/
 *.ipr
 *.iws
 
+# vs code
+.history/
+.metals/
+
 # Project exclude paths
 /out/
+bin/
