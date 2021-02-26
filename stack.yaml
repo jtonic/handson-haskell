@@ -11,9 +11,9 @@
 # Stable haskell package sets
 # https://www.stackage.org/
 # vs code supported ghc versions: https://github.com/haskell/vscode-haskell#supported-ghc-versions
-resolver: lts-16.31
+resolver: lts-17.4
 # resolver: nightly-2015-09-21
-# resolver: 8.10.2
+# resolver: 8.10.4
 
 #
 # The location of a snapshot can be provided as a file or url. Stack assumes

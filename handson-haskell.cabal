@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 1519d250a9276fd2d8a4e345110a1c24266cdab8af1b5df21f3db83394d1495b
+-- hash: 357cc814ea7be616753a1ac790a1d176f4dd2aa09594ef2eb4ff0fab78025db8
 
 name:           handson-haskell
 version:        0.1.0.0
@@ -140,7 +140,7 @@ test-suite handson-haskell-test
   ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -Wempty-enumerations -XTypeApplications -Wincomplete-patterns -XGADTs -XLambdaCase -XNegativeLiterals -XFlexibleContexts -Wno-missing-signatures -Wno-unused-local-binds -Wno-type-defaults -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       HsYAML >=0.2
-    , QuickCheck ==2.13.2
+    , QuickCheck ==2.14.2
     , base >=4.7 && <5
     , containers
     , extra >=1.7.8
