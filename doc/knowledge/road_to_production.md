@@ -1,29 +1,39 @@
 # Haskell road to PRODUCTION
 
 - [ ] Setup (visual studio code):
-  - [ ] [Stack](https://docs.haskellstack.org/en/stable/README/)
-  - [ ] Proxy
+  - [x] [Stack](https://docs.haskellstack.org/en/stable/README/)
+  - [x] Proxy
   - [ ] Private Repo (Artifactory)
+
 - [ ] Logging
+
+- [ ] [Configuration](https://conferer.ludat.io/docs/sources/basics)
+
 - [ ] Data Modeling with Haskell. Data structures
   - https://haskell-at-work.com/episodes/2018-01-19-domain-modelling-with-haskell-data-structures.html
+
 - [ ] Testing
   - [ ] [QuickCheck](https://hackage.haskell.org/package/QuickCheck)
+
 - [ ] Work with (large) Files
-- [ ] RESTful API
-  - [ ] Yesod: [here](https://hackage.haskell.org/package/yesod) and [here](https://www.yesodweb.com)
-  - [ ] [Servant] (https://docs.servant.dev/en/stable/tutorial/ApiType.html)
-  - [ ] [Scotty] (https://hackage.haskell.org/package/scotty)
-- [ ] HTTP client
+
+- [ ] __RESTful API__
+  - [ ] Yesod: [here](https://hackage.haskell.org/package/yesod) and [here](https://www.yesodweb.com), and [here for REST](https://www.yesodweb.com/book/restful-content#restful-content_representations)
+  - [ ] [Servant](https://docs.servant.dev/en/stable/tutorial/ApiType.html)
+  - [ ] [Scotty](https://hackage.haskell.org/package/scotty)
+
+- [ ] __HTTP client__
   - [ ] [Simple http-client](https://github.com/snoyberg/http-client/blob/master/TUTORIAL.md)
   - [ ] [http-tls client](<[http-client-tls](https://www.stackage.org/package/http-client-tls)>)
-- [ ] CLI
+- [ ] __CLI__
   - [ ] [optparse-applicative](https://hackage.haskell.org/package/optparse-applicative)
-- [ ] work with JSON
+- [ ] __work with JSON__
   - [ ] [Aeson](https://www.stackage.org/lts-16.22/package/aeson-1.4.7.1)
-- [ ] Web Application
+- [ ] __Web Application__
   - [ ] [yesodweb](https://www.yesodweb.com/book/widgets)
-- [ ] Persistence
+  - [ ] [WAI](https://hackage.haskell.org/package/wai-3.2.3/docs/Network-Wai.html#t:Application)
+  - [ ] [WARP](https://wiki.haskell.org/Web/Servers#Warp)
+- [ ] __Persistence__
   - [ ] [esqueleto](https://hackage.haskell.org/package/esqueleto)
 - [ ] Common Effects
   - [ ] Random
