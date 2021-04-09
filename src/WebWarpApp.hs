@@ -2,9 +2,10 @@
 module WebWarpApp where
 
 import qualified Network.Wai.Handler.Warp as W
-import Network.Wai ( responseLBS )
-import Network.HTTP.Types (status200)
+import Network.Wai ( Request (pathInfo), responseLBS )
 import Network.Wai.Internal ( Response )
+import Network.HTTP.Types ( ResponseHeaders )
+import Network.HTTP.Types.Status
 
 run :: IO ()
 run = do
@@ -12,8 +13,12 @@ run = do
     putStrLn $ "Web server started on port: " ++ show port
     W.run 3000 app
 
-app :: req -> (Response -> t) -> t
-app _ respond = respond $
-    responseLBS status200 [("Content-Type", "text/plain")] resp
+app :: Request -> (Response -> t) -> t
+app req respond = respond $
+    case pathInfo req of
+        ["greeting"]  -> greeting
+        _ -> default'
     where
-        resp = "Hello world"
+        defaultHeaders = [("Content-Type", "text/plain")] :: ResponseHeaders
+        default' = responseLBS status404 defaultHeaders "Woops!!! Not found."
+        greeting = responseLBS status200 defaultHeaders "Hello Haskell World!!!"
