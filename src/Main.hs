@@ -1,6 +1,6 @@
 module Main where
 
-import Lib ( someFunc )
+import WebWarpApp ( run )
 
 main :: IO ()
-main = someFunc
+main = run

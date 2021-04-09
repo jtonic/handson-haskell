@@ -48,6 +48,12 @@ dependencies:
 - extra >= 1.7.8
 - random
 - containers
+- warp
+- wai
+- http-types
+- conferer
+- conferer-warp
+# - conferer-dhall
 
 library:
   source-dirs: src
