@@ -1,5 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
-module WebWarpApp where
+module Esc.Web where
 
 import qualified Network.Wai.Handler.Warp as W
 import Network.Wai ( Request (pathInfo), responseLBS )

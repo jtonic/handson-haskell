@@ -46,11 +46,13 @@ dependencies:
 - HsYAML >= 0.2
 - lens >= 4.18.1
 - extra >= 1.7.8
+- bytestring
 - random
 - containers
 - warp
 - wai
 - http-types
+- aeson
 - conferer
 - conferer-warp
 # - conferer-dhall
