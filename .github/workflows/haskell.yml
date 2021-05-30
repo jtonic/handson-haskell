@@ -1,19 +1,15 @@
 on: [push]
 name: build
 jobs:
-  build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        ghc: ['8.10.4']
-        cabal: ['3.2.1.0']
-        os: [ubuntu-latest]
-    name: Haskell GHC ${{ matrix.ghc }} test
+  haskell-build:
+    name: Hello World
+    runs-on: ubuntu-latest # or macOS-latest, or windows-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Setup Haskell
-        uses: haskell/actions/setup@v1
+      - uses: haskell/actions/setup@v1
         with:
-          ghc-version: ${{ matrix.ghc }}
-          cabal-version: ${{ matrix.cabal }}
-      - run: stack test
+          ghc-version: 'latest'
+          cabal-version: 'latest'
+          enable-stack: true
+          stack-version: 'latest'
+      - run: stack --version
