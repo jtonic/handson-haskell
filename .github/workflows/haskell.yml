@@ -1,6 +1,3 @@
-# Haskel github action
-# https://github.com/actions/setup-haskell
-
 on: [push]
 name: build
 jobs:
@@ -9,24 +6,14 @@ jobs:
     strategy:
       matrix:
         ghc: ['8.10.4']
-        cabal: ['3.2']
-        stack: ['2.5']
-        os: [ubuntu-latest, macOS-latest]
-        # exclude:
-        #   # GHC 8.8+ only works with cabal v3+
-        #   - ghc: 8.8.3
-        #     cabal: 2.4.1.0
-    name: Haskell playground - ${{ matrix.os }} GHC ${{ matrix.ghc }}
+        cabal: ['3.2.1.0']
+        os: [ubuntu-latest]
+    name: Haskell GHC ${{ matrix.ghc }} test
     steps:
       - uses: actions/checkout@v2
       - name: Setup Haskell
-        uses: actions/setup-haskell@v1.1.4
+        uses: haskell/actions/setup@v1
         with:
           ghc-version: ${{ matrix.ghc }}
           cabal-version: ${{ matrix.cabal }}
-          enable-stack: true
-          stack-version: ${{ matrix.stack }}
-      - name: Run Haskell Tests
-        run: stack test
-      - name: Build Haskell Package Documentation
-        run: stack haddock
+      - run: stack test
