@@ -12,11 +12,8 @@ extra-source-files:
 
 # Metadata used when publishing your package
 # synopsis:            Short description of your package
-# category:            Web
+category:            Web
 
-# To avoid duplicated efforts in documentation and dealing with the
-# complications of embedding Haddock markup inside cabal files, it is
-# common to point users to the README.md file.
 description:         Please see the README on GitHub at <https://github.com/githubuser/handson-haskell#readme>
 
 ghc-options:
@@ -28,13 +25,10 @@ ghc-options:
 - -Wempty-enumerations
 - -XTypeApplications
 - -Wincomplete-patterns
-# - -fplugin=Polysemy.Plugin
 - -XGADTs
 - -XLambdaCase
 - -XNegativeLiterals
 - -XFlexibleContexts
-# - -fwrite-ide-info    ## needed for Stan
-# - -hiedir=.hie        ## needed for Stan
 - -Wno-missing-signatures
 - -Wno-unused-local-binds
 - -Wno-type-defaults

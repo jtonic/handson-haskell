@@ -4,11 +4,12 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 55f3486e49057986ed41135df7100566e0bc2cb25f112ce57998471c4dc0dd51
+-- hash: bc8d185aa52fca18482ffa66d9dda2875e9227e8324a2d78707da8c2bb2e51f5
 
 name:           handson-haskell
 version:        0.1.0.0
 description:    Please see the README on GitHub at <https://github.com/githubuser/handson-haskell#readme>
+category:       Web
 homepage:       https://github.com/jtonic/handson-haskell#readme
 bug-reports:    https://github.com/jtonic/handson-haskell/issues
 author:         Antonel-Ernest Pazargic
