@@ -6,6 +6,9 @@
 - hackage - Haskell packages repository
 - stack -
 - haddock - A tool to generate documentation
+- nix
+- hpack
+
 
 ## Useful/popular libraries
 

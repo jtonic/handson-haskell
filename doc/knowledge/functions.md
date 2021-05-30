@@ -5,7 +5,7 @@
 - with data type
 
 ```haskell
-ing :: Int -> Int   -- Int is a data type
+inc :: Int -> Int   -- Int is a data type
 ```
 
 - with type class - type constraint

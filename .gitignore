@@ -13,6 +13,9 @@ dist/
 .history/
 .metals/
 
+# Temp Files
+.tmp/
+
 # Project exclude paths
 /out/
 bin/

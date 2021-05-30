@@ -33,7 +33,7 @@ getSupplierId :: Supplier -> SupplierId
 getSupplierId (Supplier supplierId _ _) = supplierId
 
 getIdOfTheSupplier :: SupplierId -> Int
-getIdOfTheSupplier (SupplierId id) = id
+getIdOfTheSupplier (SupplierId id') = id'
 
 data Person =
   Person {

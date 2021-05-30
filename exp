@@ -1,0 +1,5 @@
+#!/bin/bash
+
+shopt -s expand_aliases
+alias e4="stack exec -- runhaskell src/ex/Exp.hs"
+e4

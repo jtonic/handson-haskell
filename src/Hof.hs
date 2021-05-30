@@ -1,5 +1,5 @@
 module Hof where
 
-main :: IO ()
-main = do
+run :: IO ()
+run = do
     putStrLn "Hello from Haskell!"

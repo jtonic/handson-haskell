@@ -41,21 +41,24 @@ ghc-options:
 
 dependencies:
 - base >= 4.7 && < 5
-- text >= 1.2 # text dependency
-- text-show >= 3.8
-- HsYAML >= 0.2
-- lens >= 4.18.1
-- extra >= 1.7.8
+- text
+- exceptions
+- text-show
+- HsYAML
+- lens
+- extra
+- deepseq
+- parallel
 - bytestring
 - random
 - containers
 - warp
 - wai
+- yesod
 - http-types
 - aeson
 - conferer
 - conferer-warp
-# - conferer-dhall
 
 library:
   source-dirs: src
@@ -63,8 +66,9 @@ library:
 executables:
   handson-haskell-exe:
     main:                Main.hs
-    source-dirs:         src
+    source-dirs:         app
     ghc-options:
+    - -O2
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
@@ -73,7 +77,7 @@ executables:
 
 tests:
   handson-haskell-test:
-    main:                Spec.hs
+    main:                Main.hs
     source-dirs:         test
     ghc-options:
     - -threaded
@@ -81,4 +85,6 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - handson-haskell
-    - QuickCheck == 2.14.2
+    - QuickCheck
+
+

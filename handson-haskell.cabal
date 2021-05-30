@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 357cc814ea7be616753a1ac790a1d176f4dd2aa09594ef2eb4ff0fab78025db8
+-- hash: 55f3486e49057986ed41135df7100566e0bc2cb25f112ce57998471c4dc0dd51
 
 name:           handson-haskell
 version:        0.1.0.0
@@ -30,13 +30,22 @@ library
       A.Maybe'
       Adt
       Adt'
+      Algorithms.Lecture14
       Collections.Sets
       Comprehension
+      Config.App
       Curry
       DataTypes
       DerivingInstances
       Effects.Learn1
       Environment
+      Esc.Control
+      Esc.Data
+      Esc.Web
+      Esc.Web2
+      Ex.Exp
+      Ex.Products
+      Exceptions
       Exercises_1
       ForAll
       Functions
@@ -52,9 +61,9 @@ library
       Lib
       ListComprehension
       Lists
-      Main
       Math'
-      Monads
+      Monads.MonadicFunctions
+      Parallel.Rpar
       Patterns
       Pythagorean
       Records
@@ -67,86 +76,86 @@ library
       src
   ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -Wempty-enumerations -XTypeApplications -Wincomplete-patterns -XGADTs -XLambdaCase -XNegativeLiterals -XFlexibleContexts -Wno-missing-signatures -Wno-unused-local-binds -Wno-type-defaults
   build-depends:
-      HsYAML >=0.2
+      HsYAML
+    , aeson
     , base >=4.7 && <5
+    , bytestring
+    , conferer
+    , conferer-warp
     , containers
-    , extra >=1.7.8
-    , lens >=4.18.1
+    , deepseq
+    , exceptions
+    , extra
+    , http-types
+    , lens
+    , parallel
     , random
-    , text >=1.2
-    , text-show >=3.8
+    , text
+    , text-show
+    , wai
+    , warp
+    , yesod
   default-language: Haskell2010
 
 executable handson-haskell-exe
   main-is: Main.hs
   other-modules:
-      A.B.Module1
-      A.Maybe'
-      Adt
-      Adt'
-      Collections.Sets
-      Comprehension
-      Curry
-      DataTypes
-      DerivingInstances
-      Effects.Learn1
-      Environment
-      Exercises_1
-      ForAll
-      Functions
-      Funcy
-      Gadt
-      Hello
-      HelloWorld
-      Hof
-      HRank.ElectronicsShop
-      Imports
-      Infix
-      IO.Files
-      Lib
-      ListComprehension
-      Lists
-      Math'
-      Monads
-      Patterns
-      Pythagorean
-      Records
-      Tuples
-      TypeClasses
-      Types
+      Rpar2
       Paths_handson_haskell
   hs-source-dirs:
-      src
-  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -Wempty-enumerations -XTypeApplications -Wincomplete-patterns -XGADTs -XLambdaCase -XNegativeLiterals -XFlexibleContexts -Wno-missing-signatures -Wno-unused-local-binds -Wno-type-defaults -threaded -rtsopts -with-rtsopts=-N
+      app
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -Wempty-enumerations -XTypeApplications -Wincomplete-patterns -XGADTs -XLambdaCase -XNegativeLiterals -XFlexibleContexts -Wno-missing-signatures -Wno-unused-local-binds -Wno-type-defaults -O2 -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      HsYAML >=0.2
+      HsYAML
+    , aeson
     , base >=4.7 && <5
+    , bytestring
+    , conferer
+    , conferer-warp
     , containers
-    , extra >=1.7.8
+    , deepseq
+    , exceptions
+    , extra
     , handson-haskell
-    , lens >=4.18.1
+    , http-types
+    , lens
+    , parallel
     , random
-    , text >=1.2
-    , text-show >=3.8
+    , text
+    , text-show
+    , wai
+    , warp
+    , yesod
   default-language: Haskell2010
 
 test-suite handson-haskell-test
   type: exitcode-stdio-1.0
-  main-is: Spec.hs
+  main-is: Main.hs
   other-modules:
       Paths_handson_haskell
   hs-source-dirs:
       test
   ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -Wempty-enumerations -XTypeApplications -Wincomplete-patterns -XGADTs -XLambdaCase -XNegativeLiterals -XFlexibleContexts -Wno-missing-signatures -Wno-unused-local-binds -Wno-type-defaults -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      HsYAML >=0.2
-    , QuickCheck ==2.14.2
+      HsYAML
+    , QuickCheck
+    , aeson
     , base >=4.7 && <5
+    , bytestring
+    , conferer
+    , conferer-warp
     , containers
-    , extra >=1.7.8
+    , deepseq
+    , exceptions
+    , extra
     , handson-haskell
-    , lens >=4.18.1
+    , http-types
+    , lens
+    , parallel
     , random
-    , text >=1.2
-    , text-show >=3.8
+    , text
+    , text-show
+    , wai
+    , warp
+    , yesod
   default-language: Haskell2010

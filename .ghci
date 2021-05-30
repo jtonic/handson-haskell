@@ -1,12 +1,15 @@
--- :set prompt "\ESC[95m\STXλ > \ESC[m\STX"
+:set prompt "\ESC[95m\STXλ > \ESC[m\STX"
+:set +m
 
 -- ============================================
 -- warns and sanity checking
 -- ============================================
 -- :set -Wunrecognised-pragmas
 -- :set -Wall
--- :set -XOverloadedStrings
--- :set -XScopedTypeVariables
+:set -XOverloadedStrings
+:set -XOverloadedLists
+:set -XScopedTypeVariables
+:set -XNumericUnderscores
 -- :set -Wempty-enumerations
 -- :set -Wincomplete-patterns
 
@@ -14,7 +17,7 @@
 
 -- :set -XGADTs
 -- :set -XLambdaCase
--- :set -XNegativeLiterals
+:set -XNegativeLiterals
 -- :set -XTypeOperators
 -- :set -XTupleSections
 -- :set -XFlexibleContexts
@@ -32,3 +35,4 @@
 -- ============================================
 -- :set -Wno-missing-signatures
 -- :set -Wno-type-defaults
+:set -XMonomorphismRestriction

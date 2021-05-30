@@ -15,7 +15,7 @@ Exercises:
 - Packages (stack/cabal)
   - [ ] create an executable package
   - [ ] create a library package
-  - [ ] pull the libravy package (local and remote)
+  - [ ] pull the library package (local and remote)
 
 - Monads
   - [ ] Maybe
@@ -24,5 +24,4 @@ Exercises:
 
 - Monadic functions
   - [ ] forM
-  - [ ] 
 

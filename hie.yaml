@@ -1,2 +1,10 @@
 cradle:
   stack:
+    - path: "./main/"
+      component: "handson-haskell:exe:handson-haskell-exe"
+    - path: "./src/"
+      component: "handson-haskell:lib"
+    - path: "./test/"
+      component: "handson-haskell:test:handson-haskell-test"
+    - path: "./Setup.hs"
+      component: "Cabal"

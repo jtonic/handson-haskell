@@ -12,9 +12,9 @@ double n =
     []    -> []
     _     -> 2 * head n : double(tail n)
 
-concat' = concat [[1, 2, 3], [4, 5, 6]]
-concat'' = [1, 2, 3] ++ [4, 5, 6]
+concat' = [1, 2, 3] <> [4, 5, 6]
+concat'' = [1, 2, 3] <> [4, 5, 6]
 
 head' :: [a] -> Maybe a
-head' (x : _) = Just x
+head' (y : _) = Just y
 head' _ = Nothing

@@ -14,7 +14,16 @@
 - `Tuple` - is a type that allows you to store and pass around multiple values within a single value.
   It is a product type, not a sum type.
 
+### Lazy evaluation
+
+Two most common evaluation strategies:
+    - innermost
+    - outermost
+__lazy evaluation = outermost evaluation + sharing of arguments__
+__allows programs to be more modular: separate the control part of the program from the data part of the program.__
+
 ## Acronyms
 
-- ADT - Algebraic Data Type
--
+- __ADT__ - Algebraic Data Type
+- __CCC__ - Clear Concise and Correct
+- __redex__ - reducible expression

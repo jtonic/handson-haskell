@@ -1,7 +1,7 @@
 # REST commands
 
 ### Greeting
-GET http://localhost:3000/greeting
+GET http://localhost:3000
 Accept: text/plain
 
 ### Not found
