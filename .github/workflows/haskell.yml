@@ -8,9 +8,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        ghc: ['8.8.4']
-        cabal: ['2.4.1.0']
-        stack: ['2.5.1']
+        ghc: ['8.10.4']
+        cabal: ['3.2.1.0']
+        stack: ['2.5.1.1 ']
         os: [ubuntu-latest, macOS-latest]
         # exclude:
         #   # GHC 8.8+ only works with cabal v3+
