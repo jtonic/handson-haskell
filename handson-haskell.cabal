@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: bc8d185aa52fca18482ffa66d9dda2875e9227e8324a2d78707da8c2bb2e51f5
+-- hash: f6baa28056be59711cf4f2c75f27b52a4b62b5b99071e4ae4ed5d1ed1a47527e
 
 name:           handson-haskell
 version:        0.1.0.0
@@ -66,6 +66,9 @@ library
       Monads.MonadicFunctions
       Parallel.Rpar
       Patterns
+      Pih.Ch1
+      Pih.Ch4
+      Pih.Ch5
       Pythagorean
       Records
       Tuples
