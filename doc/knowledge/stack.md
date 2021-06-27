@@ -43,6 +43,25 @@ Stack
     > stack exec -- which stack
 ```
 
+- Run dependent module in ghci using stack
+
+  It is very useful when working with ghci, load a module that imports stuff from other modules.
+
+- `stack repl`
+
+- λ > :load src/Pih/Ch7/VotesTwo.hs
+
+  Result:
+
+  ```text
+  [1 of 2] Compiling Pih.Ch7.VotesOne ( /Users/ws31wx/jtonic/dev/github/Haskell/handson-haskell/src/  Pih/Ch7/VotesOne.hs, interpreted )
+  [2 of 2] Compiling Pih.Ch7.VotesTwo ( src/Pih/Ch7/VotesTwo.hs, interpreted )
+  ```
+
+  Notes:
+  - show loaded module with `λ > :show modules`
+  - show loaded modules elements using `λ > :browse`
+
 - Adding project's dependencies (e.g. text dependency)
 
   edit the section dependencies in the file `package.yaml`:
