@@ -59,8 +59,8 @@ library:
 
 executables:
   handson-haskell-exe:
-    main:                Main.hs
     source-dirs:         app
+    main:                Main.hs
     ghc-options:
     - -O2
     - -threaded
@@ -71,8 +71,8 @@ executables:
 
 tests:
   handson-haskell-test:
-    main:                Main.hs
     source-dirs:         test
+    main:                Main.hs
     ghc-options:
     - -threaded
     - -rtsopts

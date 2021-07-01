@@ -3,7 +3,11 @@ module Main where
 -- import WebWarpApp
 -- import Esc.Control
 -- import Esc.Web2
-import qualified Parallel.Rpar as P
+-- import qualified Parallel.Rpar as P
+
+import Pih.Ch7.Exercises as E ( values )
 
 main :: IO ()
-main = P.runPar1
+main = do
+    let v = E.values
+    return ()

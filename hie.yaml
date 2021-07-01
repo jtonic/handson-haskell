@@ -1,6 +1,6 @@
 cradle:
   stack:
-    - path: "./main/"
+    - path: "./app/"
       component: "handson-haskell:exe:handson-haskell-exe"
     - path: "./src/"
       component: "handson-haskell:lib"

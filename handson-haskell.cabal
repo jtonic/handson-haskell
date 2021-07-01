@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.34.3.
+-- This file has been generated from package.yaml by hpack version 0.34.4.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: f6baa28056be59711cf4f2c75f27b52a4b62b5b99071e4ae4ed5d1ed1a47527e
+-- hash: b0003c33c145676177c665ec417a08f0fc50e1c587c9b658780a75e962f2832a
 
 name:           handson-haskell
 version:        0.1.0.0
@@ -64,11 +64,17 @@ library
       Lists
       Math'
       Monads.MonadicFunctions
+      OpticsByExample.Ex1
+      OpticsByExample.Ex2
       Parallel.Rpar
       Patterns
       Pih.Ch1
       Pih.Ch4
       Pih.Ch5
+      Pih.Ch6
+      Pih.Ch7.Exercises
+      Pih.Ch7.VotesOne
+      Pih.Ch7.VotesTwo
       Pythagorean
       Records
       Tuples
